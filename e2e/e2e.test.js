@@ -35,9 +35,8 @@ describe('Credit Card Validator form', () => {
 
   test('should add do something', async () => {
     await page.goto(baseUrl);
-    const widgetBtn = await page.$('[class=widget__btn]');
-    widgetBtn.click();
-    await page.waitForSelector('div.tooltip');
+    const button = await page.$('button');
+    button.click();
     await page.waitForFunction(() => !document.querySelector('div.tooltip'));
   });
 });
